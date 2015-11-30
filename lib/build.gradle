@@ -1,0 +1,18 @@
+
+apply plugin: "com.android.model.library"
+
+model {
+    android {
+        compileSdkVersion = 23
+        buildToolsVersion = "23.0.1"
+    }
+    android.ndk {
+        moduleName = "hello-jni"
+    }
+    android.buildTypes {
+        release {
+            ndk.debuggable = true
+        }
+    }
+}
+
