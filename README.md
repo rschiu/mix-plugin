@@ -1,5 +1,3 @@
-# debugging-prebuilt-library
+# mix-plugin
 
-run ./gradlew :lib:assembleDebug
-
-start debugging in the Android Studio
+Create app-native run configuration and add lib/build/intermediates/binaries/release to Symbol directories to start debugging native code.
