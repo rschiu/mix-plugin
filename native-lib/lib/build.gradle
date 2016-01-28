@@ -1,5 +1,22 @@
 
 apply plugin: "com.android.model.library"
+apply plugin: 'maven'
+
+repositories {
+    maven { url '../../testrepo' }
+}
+
+group = 'com.example.android'
+archivesBaseName = 'nativeLib'
+version = '1.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("../../testrepo"))
+        }
+    }
+}
 
 model {
     android {
